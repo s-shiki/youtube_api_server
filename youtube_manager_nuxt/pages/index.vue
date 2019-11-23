@@ -9,6 +9,17 @@
           />
         </div>
       </div>
+      <div class="block">
+        <nav class="paginaiton">
+          <a
+            href.prevent="#"
+            class="pagination-next"
+            @click="loadMe"
+          >
+            More
+          </a>
+        </nav>
+      </div>
     </div>
   </section>
 </template>
@@ -23,6 +34,21 @@ export default {
   computed: {
     items() {
       return this.$store.getters.getPopularVideos
+    },
+    nextPageToken() {
+      return this.$store.getters.getMeta.nextPageToken
+    },
+  },
+
+  methods: {
+    loadMe() {
+      const payload = {
+        uri: ROUTES.GET.POPULARS,
+        params: {
+          pageToken: this.nextPageToken
+        }
+      }
+      this.$store.dispatch('fetchPopularVideos', payload)
     }
   },
   async fetch({store}) {
