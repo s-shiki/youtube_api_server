@@ -37,7 +37,7 @@ export const actions = {
     },
     async signUp({ commit, dispatch }, payload) {
         await firebase.auth().createUserWithEmailAndPassword(payload.email, payload.password);
-        const res = await firebase.auth().signInWithEmailAndPassord(payload.email, payload.password);
+        const res = await firebase.auth().signInWithEmailAndPassword(payload.email, payload.password);
         const token = await res.user.getIdToken();
         this.$cookies.set('jwt_token', token);
         commit('mutateToken', token);
@@ -53,6 +53,12 @@ export const actions = {
         commit('mutateToken', token);
         this.app.router.push('/');
     },
+    async logout({ commit }) {
+        await firebase.auth().signOut();
+        commit('mutateToken', null);
+        this.$cookies.remove('jwt_token');
+        this.app.router.push('/');
+    }
 }
 
 export const mutations = {
