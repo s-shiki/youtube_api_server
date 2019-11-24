@@ -29,6 +29,7 @@ export default {
   */
   plugins: [
     '~/plugins/vue_youtube',
+    '~/plugins/cookies_to_state',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -42,6 +43,7 @@ export default {
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
+    'cookie-universal-nuxt',
   ],
   axios: {
     baseURL: 'http://localhost:8080/'
