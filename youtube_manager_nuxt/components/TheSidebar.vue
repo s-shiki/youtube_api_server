@@ -4,8 +4,10 @@
             <aside class="menu">
                 <ul class="munu-list">
                     <li>
-                        <nuxt-link to="/">
-                            ホーム
+                        <nuxt-link
+                            to="/"
+                        >
+                            Home
                         </nuxt-link>
                     </li>
                 </ul>

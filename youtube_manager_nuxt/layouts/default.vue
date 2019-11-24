@@ -3,7 +3,7 @@
     <TheHeader />
 
     <div class="columns">
-      <ThisSidebar />
+      <TheSidebar />
       
       <div class="column content">
         <nuxt/>

@@ -1,7 +1,10 @@
 <template>
     <nav class="navbar">
         <div class="navbar-brand">
-            <nuxt-link class="navbar-item subtitle is-4" to="/">
+            <nuxt-link
+                class="navbar-item subtitle is-4"
+                to="/"
+            >
                 YouTube Player
             </nuxt-link>
         </div>
@@ -11,13 +14,17 @@
                 <div class="navbar-item">
                     <div class="field has-addons">
                         <form action="/search" methods="get">
-                            <input name="q" class="input" type="text" placeholder="検索">
+                            <div class="field has-addons">
+                                <div calss="control">
+                                    <input name="q" class="input" type="text" placeholder="検索">
+                                </div>
+                                <div class="control">
+                                    <button class="button">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
                         </form>
-                        <p class="control">
-                            <button class="button">
-                                Search
-                            </button>
-                        </p>
                     </div>
                 </div>
             </div>
