@@ -5,5 +5,22 @@
                 YouTube Player
             </nuxt-link>
         </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <div class="field has-addons">
+                        <form action="/search" methods="get">
+                            <input name="q" class="input" type="text" placeholder="検索">
+                        </form>
+                        <p class="control">
+                            <button class="button">
+                                Search
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 </template>
