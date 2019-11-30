@@ -10,6 +10,12 @@ export class RequestClient {
                 return this.retry(err)
             })
     }
+    async post(uri) {
+        return await this.axios.$post(uri)
+            .catch(err => {
+                return this.retry(err)
+            })
+    }
 }
 
 export function createRequestClient(axios) {
