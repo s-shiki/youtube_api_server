@@ -10,6 +10,15 @@
                             Home
                         </nuxt-link>
                     </li>
+
+                    <li>
+                        <nuxt-link
+                            to="/favorite"
+                        >
+                            Favorites
+                        </nuxt-link>
+                    </li>
+                    
                 </ul>
             </aside>
         </div>
